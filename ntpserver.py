@@ -71,7 +71,7 @@ def update_redis(source, port):
     msg = "NTP scan: %s:%s - %s" % (source,port, datetime.datetime.now())
     print msg
     logger.info("msg: %s" % msg)
-    d = gd.record_by_addr(peerIP)
+    d = gd.record_by_addr(source)
     if d == None:
         d = {"latitude":25.03, "logitude": 121.53, "country_code": "TW"}
     dat = {}
